@@ -1,30 +1,41 @@
 package biblioteca.modelos;
 
 public class Libro {
+    private int id;
     private String titulo;
     private String autor;
-    private boolean prestado;
 
-    public Libro(String titulo, String autor) {
+    public Libro(int id, String titulo, String autor) {
+        this.id = id;
         this.titulo = titulo;
         this.autor = autor;
-        this.prestado = false;
     }
 
-    public String getTitulo() { return titulo; }
-    public void setTitulo(String titulo) { this.titulo = titulo; }
+    public int getId() {
+        return id;
+    }
+    public String getTitulo() {
+        return titulo;
+    }
+    public String getAutor() {
+        return autor;
+    }
 
-    public String getAutor() { return autor; }
-    public void setAutor(String autor) { this.autor = autor; }
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Libro)) return false;
+        Libro libro = (Libro) o;
+        return id == libro.id;
+    }
 
-    public boolean isPrestado() { return prestado; }
-    public void setPrestado(boolean prestado) { this.prestado = prestado; }
-
-    public void prestar() { this.prestado = true; }
-    public void devolver() { this.prestado = false; }
+    @Override
+    public int hashCode() {
+        return Integer.hashCode(id);
+    }
 
     @Override
     public String toString() {
-        return "Título: " + titulo + ", Autor: " + autor + ", Estado: " + (prestado ? "Prestado" : "Disponible");
+        return "ID: " + id + " | Título: " + titulo + " | Autor: " + autor;
     }
 }

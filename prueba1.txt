@@ -1,0 +1,2 @@
+Libros actualmente prestados:
+ID: 1 | Título: ﻿It | Autor: Stephen King

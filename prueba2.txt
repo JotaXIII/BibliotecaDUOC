@@ -1,0 +1,14 @@
+=== Libros Prestados ===
+ID: 1 | Título: ﻿It | Autor: Stephen King
+
+=== Libros Disponibles ===
+ID: 10 | Título: 11/22/1963 | Autor: Stephen King
+ID: 2 | Título: Carrie | Autor: Stephen King
+ID: 8 | Título: Doctor Sleep | Autor: Stephen King
+ID: 9 | Título: Gerald's Game | Autor: Stephen King
+ID: 11 | Título: La Biblia | Autor: Apostoles
+ID: 5 | Título: Misery | Autor: Stephen King
+ID: 4 | Título: Pet Sematary | Autor: Stephen King
+ID: 7 | Título: Salem's Lot | Autor: Stephen King
+ID: 3 | Título: The Shining | Autor: Stephen King
+ID: 6 | Título: The Stand | Autor: Stephen King

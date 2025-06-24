@@ -1,17 +1,36 @@
 package biblioteca.modelos;
 
 public class Usuario {
-    private String nombre;
     private String rut;
+    private String nombre;
 
-    public Usuario(String nombre, String rut) {
-        this.nombre = nombre;
+    public Usuario(String rut, String nombre) {
         this.rut = rut;
+        this.nombre = nombre;
     }
 
-    public String getNombre() { return nombre; }
-    public void setNombre(String nombre) { this.nombre = nombre; }
+    public String getRut() {
+        return rut;
+    }
+    public String getNombre() {
+        return nombre;
+    }
 
-    public String getRut() { return rut; }
-    public void setRut(String rut) { this.rut = rut; }
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Usuario)) return false;
+        Usuario usuario = (Usuario) o;
+        return rut.equals(usuario.rut);
+    }
+
+    @Override
+    public int hashCode() {
+        return rut.hashCode();
+    }
+
+    @Override
+    public String toString() {
+        return "RUT: " + rut + " | Nombre: " + nombre;
+    }
 }
